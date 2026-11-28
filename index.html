@@ -1,0 +1,574 @@
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1027029879687164');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1027029879687164&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+
+<style>
+/* ================= GLOBAL RESETS & STYLING ================= */
+.hw-root {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #1e293b;
+  background-color: #ffffff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 80px;
+}
+.hw-root *, .hw-root *::before, .hw-root *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.hw-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ================= 10D MULTI-LAYER 3D BUTTONS ================= */
+.btn-10d {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 16px 28px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  overflow: hidden;
+  transform: perspective(700px) translateZ(0);
+  transform-style: preserve-3d;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 4px 8px rgba(22, 163, 74, 0.28),
+    0 10px 22px rgba(22, 163, 74, 0.35),
+    0 18px 36px rgba(22, 163, 74, 0.22),
+    inset 0 2px 3px rgba(255, 255, 255, 0.65),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.22);
+  transition: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  animation: pulse-10d 2.8s infinite ease-in-out;
+}
+
+.btn-10d::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -130%;
+  width: 90%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.75) 50%,
+    rgba(255, 255, 255, 0) 70%,
+    transparent 100%
+  );
+  transform: skewX(-24deg);
+  animation: sheen-sweep 3.2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.btn-10d:hover {
+  transform: perspective(700px) translateZ(12px) translateY(-3px) scale(1.02);
+  background: linear-gradient(135deg, #34d399 0%, #22c55e 50%, #16a34a 100%);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.08),
+    0 8px 16px rgba(34, 197, 94, 0.38),
+    0 16px 32px rgba(34, 197, 94, 0.42),
+    0 26px 48px rgba(34, 197, 94, 0.3),
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-10d:active {
+  transform: perspective(700px) translateZ(-4px) translateY(2px) scale(0.985);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.12),
+    0 3px 8px rgba(22, 163, 74, 0.25),
+    inset 0 3px 6px rgba(0, 0, 0, 0.35);
+}
+
+@keyframes pulse-10d {
+  0%, 100% {
+    filter: drop-shadow(0 0 0 rgba(34, 197, 94, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(34, 197, 94, 0.65));
+  }
+}
+
+@keyframes sheen-sweep {
+  0% { left: -130%; }
+  35%, 100% { left: 150%; }
+}
+
+/* ================= GLASS & AURORA EFFECTS ================= */
+.hw-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+}
+.hw-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 4px 20px -4px rgba(15, 23, 42, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hw-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px -6px rgba(15, 23, 42, 0.1);
+}
+
+.hw-shimmer-text {
+  background: linear-gradient(90deg, #0f172a 0%, #2563eb 50%, #0f172a 100%);
+  background-size: 200% auto;
+  color: transparent !important;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 4s linear infinite;
+}
+@keyframes shine {
+  to { background-position: 200% center; }
+}
+
+/* ================= SECTIONS ================= */
+.hw-topbar {
+  background: #0b1329;
+  color: #e2e8f0;
+  padding: 10px 16px;
+  font-size: 13px;
+  text-align: center;
+}
+.hw-live-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 10px #22c55e;
+  margin-right: 6px;
+}
+.hw-timer-tag {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  color: #f59e0b;
+}
+
+.hw-nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 12px 0;
+}
+.hw-nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hw-logo-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.hw-hero {
+  padding: 48px 0 60px;
+  background: radial-gradient(circle at 50% 20%, rgba(37, 99, 235, 0.05), transparent 70%);
+}
+.hw-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: center;
+}
+@media (min-width: 900px) {
+  .hw-hero-grid {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+}
+.hw-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #2563eb;
+  background: #eff6ff;
+  border: 1px solid #dbeafe;
+  margin-bottom: 16px;
+}
+.hw-hero h1 {
+  font-size: 34px;
+  line-height: 1.18;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 16px;
+}
+@media (min-width: 640px) {
+  .hw-hero h1 { font-size: 46px; }
+}
+.hw-hero p.lead {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.hw-hero-img {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.08);
+  margin-top: 24px;
+  object-fit: cover;
+}
+
+.hw-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.hw-feat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.hw-section-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+.hw-section-sub {
+  text-align: center;
+  font-size: 15px;
+  color: #64748b;
+  margin-bottom: 36px;
+}
+
+.hw-tracks-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .hw-tracks-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.hw-track-featured {
+  border: 2px solid #2563eb !important;
+  position: relative;
+}
+.hw-feat-pill {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.hw-track-salary {
+  font-size: 28px;
+  font-weight: 800;
+  color: #2563eb;
+}
+.hw-track-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 13px;
+}
+.hw-track-row span:first-child { color: #64748b; }
+.hw-track-row span:last-child { font-weight: 700; color: #0f172a; }
+
+.hw-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .hw-steps-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.hw-step-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+/* ================= MOBILE BOTTOM FLOATING BAR ================= */
+.hw-mobile-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid #e2e8f0;
+  padding: 10px 16px;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+}
+@media (min-width: 768px) {
+  .hw-mobile-bar { display: none; }
+}
+
+@media (max-width: 640px) {
+  .btn-10d {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+  }
+}
+</style>
+
+<div class="hw-root">
+  <!-- Announcement Topbar -->
+  <div class="hw-topbar">
+    <div class="hw-container">
+      <span class="hw-live-dot"></span>
+      <strong>Live Project Allocations Active</strong> | Registration closing in <span class="hw-timer-tag" id="hw-timer">14:59 mins</span> | Only <strong>35 Slots</strong> Available
+    </div>
+  </div>
+
+  <!-- Sticky Nav -->
+  <header class="hw-nav">
+    <div class="hw-container hw-nav-wrap">
+      <div class="hw-logo-title">Handwriting Homework</div>
+      <a href="https://t.me/+iuiIhKp-xFRkMTVl" target="_blank" rel="noopener noreferrer" class="btn-10d" style="padding: 10px 20px; font-size: 14px;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+        Join Telegram Channel
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hw-hero">
+    <div class="hw-container">
+      <div class="hw-hero-grid">
+        <div>
+          <div class="hw-badge">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            Open to Students, Homemakers & Remote Professionals
+          </div>
+          <h1>Handwriting Homework Books — <span class="hw-shimmer-text">Earn ₹24,000 to ₹40,000 Monthly</span></h1>
+          <p class="lead">
+            Handwrytten Publicationg allocates premium handwriting book projects to verified writers across India. Free notebook kit, fixed salary, and complete work-from-home flexibility — no experience required, minimum 10th pass.
+          </p>
+          <a href="https://t.me/+iuiIhKp-xFRkMTVl" target="_blank" rel="noopener noreferrer" class="btn-10d">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+            Join Telegram Channel
+          </a>
+          <p style="font-size: 13px; color: #64748b; margin-top: 10px;">
+            Assignment onboarding and script review managed under safe data networks.
+          </p>
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=1024&q=80" alt="Handwriting work from home" class="hw-hero-img">
+        </div>
+
+        <div class="hw-features-list">
+          <div class="hw-card" style="display: flex; gap: 16px;">
+            <div class="hw-feat-icon">₹</div>
+            <div>
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a;">Guaranteed Fixed Salary</h3>
+              <p style="font-size: 14px; color: #64748b; margin-top: 4px;">Earn a stable monthly payment between ₹24,000 to ₹40,000 based completely on your project completion milestone tracks.</p>
+            </div>
+          </div>
+
+          <div class="hw-card" style="display: flex; gap: 16px;">
+            <div class="hw-feat-icon">🎓</div>
+            <div>
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a;">Minimum 10th Pass Eligible</h3>
+              <p style="font-size: 14px; color: #64748b; margin-top: 4px;">No high degree required. Anyone who has completed 10th standard with clear handwriting can join immediately.</p>
+            </div>
+          </div>
+
+          <div class="hw-card" style="display: flex; gap: 16px;">
+            <div class="hw-feat-icon" style="background: #f0fdf4; color: #16a34a;">🏠</div>
+            <div>
+              <h3 style="font-size: 17px; font-weight: 700; color: #0f172a;">Work From Home</h3>
+              <p style="font-size: 14px; color: #64748b; margin-top: 4px;">Vishv Book Publisher provides complete work from home with free notebook kit delivery straight to your address.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Tracks -->
+  <section style="padding: 60px 0; background: #f8fafc;">
+    <div class="hw-container">
+      <h2 class="hw-section-title">Active Assignment Project Tracks</h2>
+      <p class="hw-section-sub">Review project timeline milestones and corresponding structural payout figures.</p>
+
+      <div class="hw-tracks-grid">
+        <!-- Track 1 -->
+        <div class="hw-card">
+          <span style="font-size: 11px; font-weight: 800; color: #64748b; background: #f1f5f9; padding: 3px 8px; border-radius: 6px; text-transform: uppercase;">Track Alpha</span>
+          <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-top: 10px;">7 Days Project</h3>
+          <p style="font-size: 14px; color: #64748b; margin-top: 4px;">Excellent foundational layout testing track for students.</p>
+          <div style="margin: 20px 0;">
+            <div class="hw-track-row"><span>Daily Target Quota</span><span>07 Pages</span></div>
+            <div class="hw-track-row"><span>Cumulative Volume</span><span>49 Pages</span></div>
+            <div class="hw-track-row"><span>Notebook Kit</span><span>Free Provided</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 14px;">
+              <span style="color: #64748b; font-weight: 600;">Contract Salary</span>
+              <span class="hw-track-salary">₹24,000</span>
+            </div>
+          </div>
+          <a href="https://t.me/+iuiIhKp-xFRkMTVl" target="_blank" rel="noopener noreferrer" class="btn-10d" style="width: 100%;">
+            Join Telegram Channel
+          </a>
+        </div>
+
+        <!-- Track 2 (Featured) -->
+        <div class="hw-card hw-track-featured">
+          <div class="hw-feat-pill">High Volume Allocation</div>
+          <span style="font-size: 11px; font-weight: 800; color: #2563eb; background: #eff6ff; padding: 3px 8px; border-radius: 6px; text-transform: uppercase;">Track Beta</span>
+          <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-top: 10px;">10 Days Project</h3>
+          <p style="font-size: 14px; color: #64748b; margin-top: 4px;">Optimal routine track engineered for domestic homemakers.</p>
+          <div style="margin: 20px 0;">
+            <div class="hw-track-row"><span>Daily Target Quota</span><span>10 Pages</span></div>
+            <div class="hw-track-row"><span>Cumulative Volume</span><span>100 Pages</span></div>
+            <div class="hw-track-row"><span>Orientation Support</span><span>Full Training</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 14px;">
+              <span style="color: #64748b; font-weight: 600;">Contract Salary</span>
+              <span class="hw-track-salary">₹30,000</span>
+            </div>
+          </div>
+          <a href="https://t.me/+iuiIhKp-xFRkMTVl" target="_blank" rel="noopener noreferrer" class="btn-10d" style="width: 100%;">
+            Join Telegram Channel
+          </a>
+        </div>
+
+        <!-- Track 3 -->
+        <div class="hw-card">
+          <span style="font-size: 11px; font-weight: 800; color: #64748b; background: #f1f5f9; padding: 3px 8px; border-radius: 6px; text-transform: uppercase;">Track Gamma</span>
+          <h3 style="font-size: 22px; font-weight: 800; color: #0f172a; margin-top: 10px;">15 Days Project</h3>
+          <p style="font-size: 14px; color: #64748b; margin-top: 4px;">Advanced track designed for high-speed configuration output.</p>
+          <div style="margin: 20px 0;">
+            <div class="hw-track-row"><span>Daily Target Quota</span><span>15 Pages</span></div>
+            <div class="hw-track-row"><span>Cumulative Volume</span><span>200+ Pages</span></div>
+            <div class="hw-track-row"><span>Performance Bonus</span><span>Tiers Active</span></div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding-top: 14px;">
+              <span style="color: #64748b; font-weight: 600;">Contract Salary</span>
+              <span class="hw-track-salary">₹40,000</span>
+            </div>
+          </div>
+          <a href="https://t.me/+iuiIhKp-xFRkMTVl" target="_blank" rel="noopener noreferrer" class="btn-10d" style="width: 100%;">
+            Join Telegram Channel
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section style="padding: 60px 0;">
+    <div class="hw-container">
+      <h2 class="hw-section-title">Onboarding & Operational Timeline</h2>
+      <p class="hw-section-sub">Simple 3-step setup to start your handwriting assignment.</p>
+      <div class="hw-steps-grid">
+        <div class="hw-card">
+          <div class="hw-step-num">1</div>
+          <h3 style="font-size: 18px; font-weight: 700; color: #0f172a;">Channel Integration</h3>
+          <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Secure registration space access by joining our official Telegram channel link directly.</p>
+        </div>
+        <div class="hw-card">
+          <div class="hw-step-num">2</div>
+          <h3 style="font-size: 18px; font-weight: 700; color: #0f172a;">Sample Assessment</h3>
+          <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Evaluate font samples provided digitally and complete a baseline sample handwriting submission.</p>
+        </div>
+        <div class="hw-card">
+          <div class="hw-step-num">3</div>
+          <h3 style="font-size: 18px; font-weight: 700; color: #0f172a;">Disbursement Setup</h3>
+          <p style="font-size: 14px; color: #64748b; margin-top: 6px;">Receive your free writing kit, submit completed pages sequentially, and receive bank payouts.</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="https://t.me/+iuiIhKp-xFRkMTVl" target="_blank" rel="noopener noreferrer" class="btn-10d">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          Join Telegram Channel
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Mobile Bar -->
+  <div class="hw-mobile-bar">
+    <a href="https://t.me/+iuiIhKp-xFRkMTVl" target="_blank" rel="noopener noreferrer" class="btn-10d">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+      Join Telegram Channel
+    </a>
+  </div>
+</div>
+
+<script>
+// Dynamic countdown timer
+(function() {
+  var sec = 15 * 60 - 1;
+  var el = document.getElementById('hw-timer');
+  if (!el) return;
+  setInterval(function() {
+    if (sec > 0) sec--;
+    var m = String(Math.floor(sec / 60)).padStart(2, '0');
+    var s = String(sec % 60).padStart(2, '0');
+    el.textContent = m + ':' + s + ' mins';
+  }, 1000);
+})();
+</script>
