@@ -1,0 +1,712 @@
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1474586168203985');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1474586168203985&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --vp-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --vp-mono: 'JetBrains Mono', monospace;
+    --vp-bg: #ffffff;
+    --vp-surface: #f8fafc;
+    --vp-card: rgba(255, 255, 255, 0.85);
+    --vp-border: rgba(226, 232, 240, 0.85);
+    --vp-text: #0f172a;
+    --vp-muted: #64748b;
+    --vp-primary: #2563eb;
+    --vp-primary-hover: #1d4ed8;
+    --vp-success: #16a34a;
+    --vp-success-hover: #15803d;
+    --vp-topbar: #0f172a;
+    --vp-warning: #f59e0b;
+  }
+
+  .vp-wrapper {
+    all: initial;
+    display: block;
+    font-family: var(--vp-font);
+    background: var(--vp-bg);
+    color: var(--vp-text);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .vp-wrapper * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+  }
+  .vp-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  /* 10D Ultra-Dynamic Button Animation */
+  .vp-btn-10d {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 14px;
+    overflow: hidden;
+    transform: perspective(600px) translateZ(0);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    will-change: transform, box-shadow;
+  }
+
+  /* Primary Blue 10D */
+  .vp-btn-10d-primary {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 50%, #1d4ed8 100%);
+    color: #ffffff !important;
+    box-shadow: 
+      0 2px 4px rgba(37, 99, 235, 0.2),
+      0 6px 12px rgba(37, 99, 235, 0.25),
+      0 12px 24px rgba(37, 99, 235, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* Green High-Impact 10D */
+  .vp-btn-10d-success {
+    background: linear-gradient(135deg, #22c55e 0%, #16a34a 50%, #15803d 100%);
+    color: #ffffff !important;
+    box-shadow: 
+      0 2px 4px rgba(22, 163, 74, 0.25),
+      0 8px 16px rgba(22, 163, 74, 0.3),
+      0 16px 32px rgba(22, 163, 74, 0.22),
+      inset 0 1px 1px rgba(255, 255, 255, 0.5),
+      inset 0 -3px 0 rgba(0, 0, 0, 0.22);
+    animation: vpPulseGlow 3s ease-in-out infinite alternate;
+  }
+
+  /* Sheen Beam & Neon Sweep */
+  .vp-btn-10d::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -120%;
+    width: 60%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+    transform: skewX(-25deg);
+    animation: vpSheenSweep 3.2s infinite ease-in-out;
+    pointer-events: none;
+  }
+
+  /* Hover & Active 10D Micro-Physics */
+  .vp-btn-10d:hover {
+    transform: perspective(600px) translateY(-5px) scale(1.025);
+  }
+  .vp-btn-10d-primary:hover {
+    box-shadow: 
+      0 4px 8px rgba(37, 99, 235, 0.25),
+      0 12px 24px rgba(37, 99, 235, 0.35),
+      0 24px 44px rgba(37, 99, 235, 0.28),
+      inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  }
+  .vp-btn-10d-success:hover {
+    box-shadow: 
+      0 6px 12px rgba(22, 163, 74, 0.3),
+      0 16px 32px rgba(22, 163, 74, 0.4),
+      0 32px 56px rgba(22, 163, 74, 0.32),
+      inset 0 1px 1px rgba(255, 255, 255, 0.7);
+  }
+  .vp-btn-10d:active {
+    transform: perspective(600px) translateY(2px) scale(0.985);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25), inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  @keyframes vpSheenSweep {
+    0% { left: -100%; opacity: 0; }
+    20% { opacity: 1; }
+    50%, 100% { left: 160%; opacity: 0; }
+  }
+  @keyframes vpPulseGlow {
+    0% {
+      filter: drop-shadow(0 0 0 rgba(22, 163, 74, 0));
+    }
+    100% {
+      filter: drop-shadow(0 0 16px rgba(34, 197, 94, 0.65));
+    }
+  }
+
+  /* Topbar */
+  .vp-topbar {
+    background: var(--vp-topbar);
+    color: #e2e8f0;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .vp-topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .vp-live-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #3b82f6;
+    border-radius: 50%;
+    animation: vpPulseDot 1.6s infinite ease-in-out;
+  }
+  .vp-timer {
+    font-family: var(--vp-mono);
+    color: var(--vp-warning);
+    font-weight: 700;
+  }
+  .vp-badge-tag {
+    background: rgba(255, 255, 255, 0.12);
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+  }
+
+  @keyframes vpPulseDot {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(0.7); opacity: 0.4; }
+  }
+
+  /* Header */
+  .vp-header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--vp-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .vp-header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+  }
+  .vp-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--vp-text);
+  }
+  .vp-brand img {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    object-fit: contain;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  }
+  .vp-brand-title {
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+  }
+
+  /* Hero Section */
+  .vp-hero {
+    padding: 70px 0 60px;
+    background: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.06) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(34, 197, 94, 0.05) 0%, transparent 40%);
+  }
+  .vp-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .vp-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border-radius: 999px;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: var(--vp-primary);
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .vp-hero-h1 {
+    font-size: 46px;
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 22px 0 16px;
+  }
+  .vp-highlight {
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 50%, #16a34a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .vp-hero-desc {
+    font-size: 17px;
+    color: var(--vp-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .vp-hero-sub {
+    font-size: 13px;
+    color: var(--vp-muted);
+    margin-top: 14px;
+  }
+
+  /* Feature cards */
+  .vp-feature-card {
+    background: var(--vp-card);
+    border: 1px solid var(--vp-border);
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  }
+  .vp-feature-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--vp-text);
+    margin-bottom: 6px;
+  }
+  .vp-feature-text {
+    font-size: 14px;
+    color: var(--vp-muted);
+    line-height: 1.5;
+  }
+
+  /* Project Tracks */
+  .vp-tracks-section {
+    padding: 70px 0;
+    background: #f8fafc;
+  }
+  .vp-section-head {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 50px;
+  }
+  .vp-section-h2 {
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+  }
+  .vp-section-p {
+    font-size: 16px;
+    color: var(--vp-muted);
+    margin-top: 10px;
+  }
+  .vp-tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .vp-track-card {
+    background: #ffffff;
+    border: 1px solid var(--vp-border);
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .vp-track-card.featured {
+    border: 2px solid var(--vp-primary);
+    transform: scale(1.02);
+  }
+  .vp-track-badge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--vp-primary);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 14px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .vp-track-tag {
+    display: inline-block;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+  .vp-track-title {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 14px 0 6px;
+  }
+  .vp-track-desc {
+    font-size: 13.5px;
+    color: var(--vp-muted);
+  }
+  .vp-track-list {
+    margin: 22px 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--vp-border);
+    list-style: none;
+  }
+  .vp-track-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13.5px;
+    padding: 8px 0;
+  }
+  .vp-track-item span:first-child { color: var(--vp-muted); }
+  .vp-track-item span:last-child { font-weight: 700; color: var(--vp-text); }
+  .vp-salary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0 20px;
+    border-top: 1px solid var(--vp-border);
+  }
+  .vp-salary-val {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--vp-primary);
+  }
+
+  /* How It Works & Guidelines */
+  .vp-how-section {
+    padding: 70px 0;
+  }
+  .vp-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .vp-step-card {
+    background: #ffffff;
+    border: 1px solid var(--vp-border);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+  }
+  .vp-step-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--vp-primary);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 800;
+    box-shadow: 0 6px 14px rgba(37, 99, 235, 0.3);
+    margin-bottom: 18px;
+  }
+  .vp-guide-box {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .vp-guide-item {
+    background: #ffffff;
+    border: 1px solid var(--vp-border);
+    border-radius: 14px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .vp-check-icon {
+    color: var(--vp-success);
+    font-weight: 900;
+    font-size: 18px;
+  }
+
+  /* Footer */
+  .vp-footer {
+    background: var(--vp-topbar);
+    color: #94a3b8;
+    text-align: center;
+    padding: 36px 20px;
+    font-size: 13px;
+  }
+
+  /* Responsive Mobile */
+  @media (max-width: 860px) {
+    .vp-hero-grid,
+    .vp-tracks-grid,
+    .vp-steps-grid {
+      grid-template-columns: 1fr;
+    }
+    .vp-hero-h1 {
+      font-size: 32px;
+    }
+    .vp-track-card.featured {
+      transform: none;
+    }
+  }
+</style>
+
+<div class="vp-wrapper">
+
+  <!-- Top Announcement Bar -->
+  <div class="vp-topbar">
+    <div class="vp-topbar-inner">
+      <span><span class="vp-live-dot"></span> Live Project Allocations Active</span>
+      <span>|</span>
+      <span>Registration closing in <span id="vp-clock" class="vp-timer">14:59 mins</span></span>
+      <span>|</span>
+      <span class="vp-badge-tag">Only <strong>35</strong> Slots Available</span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="vp-header">
+    <div class="vp-container vp-header-inner">
+      <a href="https://t.me/+D2BmKU2nX6s3OTg1" class="vp-brand" target="_blank" rel="noopener">
+        <img src="https://color-text-bouncetiger.lovable.app/__l5e/assets-v1/0016e206-96f2-4c21-b81b-82a29beb7d82/logo.png" alt="Handwriting Homework Logo" />
+        <span class="vp-brand-title">Handwriting Homework</span>
+      </a>
+      <a href="https://t.me/+D2BmKU2nX6s3OTg1" class="vp-btn-10d vp-btn-10d-primary" style="padding: 11px 24px; font-size: 14px;" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        Join Telegram Channel
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="vp-hero">
+    <div class="vp-container vp-hero-grid">
+      <div>
+        <span class="vp-pill">
+          ✓ Open to Students, Homemakers &amp; Remote Professionals
+        </span>
+        <h1 class="vp-hero-h1">
+          Handwriting Homework Books — <span class="vp-highlight">Earn ₹24,000 to ₹40,000 Monthly</span>
+        </h1>
+        <p class="vp-hero-desc">
+          Handwrytten Publicationg allocates premium handwriting book projects to verified writers across India. Free notebook kit, fixed salary, and complete work-from-home flexibility — no experience required, minimum 10th pass.
+        </p>
+
+        <!-- Main Hero CTA Button -->
+        <a href="https://t.me/+D2BmKU2nX6s3OTg1" class="vp-btn-10d vp-btn-10d-success" style="padding: 18px 38px; font-size: 18px;" target="_blank" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          Join Telegram Channel
+        </a>
+        <p class="vp-hero-sub">Assignment onboarding and script review managed under safe data networks.</p>
+      </div>
+
+      <!-- Feature Highlight Column -->
+      <div>
+        <div class="vp-feature-card">
+          <h3 class="vp-feature-title">₹ Guaranteed Fixed Salary</h3>
+          <p class="vp-feature-text">Earn a stable monthly payment between ₹24,000 to ₹40,000 based completely on your project completion milestone tracks.</p>
+        </div>
+        <div class="vp-feature-card">
+          <h3 class="vp-feature-title">🎓 Minimum 10th Pass Eligible</h3>
+          <p class="vp-feature-text">No high degree or corporate background required. Anyone who has completed 10th standard with clear handwriting skills can join immediately.</p>
+        </div>
+        <div class="vp-feature-card">
+          <h3 class="vp-feature-title">🏠 Work From Home</h3>
+          <p class="vp-feature-text">Vishv Book Publisher provides you work-from-home jobs where you write script pages and earn from the comfort of your home.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Tracks Section -->
+  <section class="vp-tracks-section">
+    <div class="vp-container">
+      <div class="vp-section-head">
+        <h2 class="vp-section-h2">Active Assignment Project Tracks</h2>
+        <p class="vp-section-p">Review project timeline milestones and corresponding structural payout figures.</p>
+      </div>
+
+      <div class="vp-tracks-grid">
+        <!-- Track 1 -->
+        <div class="vp-track-card">
+          <div>
+            <span class="vp-track-tag">Track Alpha</span>
+            <h3 class="vp-track-title">7 Days Project</h3>
+            <p class="vp-track-desc">Excellent foundational layout testing track for students.</p>
+            <ul class="vp-track-list">
+              <li class="vp-track-item"><span>Daily Target Quota</span><span>07 Pages</span></li>
+              <li class="vp-track-item"><span>Cumulative Target Volume</span><span>49 Pages</span></li>
+              <li class="vp-track-item"><span>Resource Notebook Allocation</span><span>Complimentary Provided</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="vp-salary-row">
+              <span style="color: var(--vp-muted); font-size: 14px;">Contract Salary</span>
+              <span class="vp-salary-val">₹24,000</span>
+            </div>
+            <a href="https://t.me/+D2BmKU2nX6s3OTg1" class="vp-btn-10d vp-btn-10d-primary" style="width: 100%; padding: 14px 20px; font-size: 15px;" target="_blank" rel="noopener">
+              Join Telegram Channel
+            </a>
+          </div>
+        </div>
+
+        <!-- Track 2 (Featured) -->
+        <div class="vp-track-card featured">
+          <span class="vp-track-badge">High Volume Allocation</span>
+          <div>
+            <span class="vp-track-tag">Track Beta</span>
+            <h3 class="vp-track-title">10 Days Project</h3>
+            <p class="vp-track-desc">Optimal routine track engineered for domestic homemakers.</p>
+            <ul class="vp-track-list">
+              <li class="vp-track-item"><span>Daily Target Quota</span><span>10 Pages</span></li>
+              <li class="vp-track-item"><span>Cumulative Target Volume</span><span>100 Pages</span></li>
+              <li class="vp-track-item"><span>Orientation Support</span><span>Complete Training Package</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="vp-salary-row">
+              <span style="color: var(--vp-muted); font-size: 14px;">Contract Salary</span>
+              <span class="vp-salary-val">₹30,000</span>
+            </div>
+            <a href="https://t.me/+D2BmKU2nX6s3OTg1" class="vp-btn-10d vp-btn-10d-success" style="width: 100%; padding: 15px 20px; font-size: 15px;" target="_blank" rel="noopener">
+              Join Telegram Channel
+            </a>
+          </div>
+        </div>
+
+        <!-- Track 3 -->
+        <div class="vp-track-card">
+          <div>
+            <span class="vp-track-tag">Track Gamma</span>
+            <h3 class="vp-track-title">15 Days Project</h3>
+            <p class="vp-track-desc">Advanced track designed for high-speed configuration output.</p>
+            <ul class="vp-track-list">
+              <li class="vp-track-item"><span>Daily Target Quota</span><span>15 Pages</span></li>
+              <li class="vp-track-item"><span>Cumulative Target Volume</span><span>200+ Pages</span></li>
+              <li class="vp-track-item"><span>Performance Incentives</span><span>Additional Tiers Active</span></li>
+            </ul>
+          </div>
+          <div>
+            <div class="vp-salary-row">
+              <span style="color: var(--vp-muted); font-size: 14px;">Contract Salary</span>
+              <span class="vp-salary-val">₹40,000</span>
+            </div>
+            <a href="https://t.me/+D2BmKU2nX6s3OTg1" class="vp-btn-10d vp-btn-10d-primary" style="width: 100%; padding: 14px 20px; font-size: 15px;" target="_blank" rel="noopener">
+              Join Telegram Channel
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps Section -->
+  <section class="vp-how-section">
+    <div class="vp-container">
+      <div class="vp-section-head">
+        <h2 class="vp-section-h2">Onboarding &amp; Operational Timeline</h2>
+        <p class="vp-section-p">Simple 3-step registration and milestone verification process.</p>
+      </div>
+
+      <div class="vp-steps-grid">
+        <div class="vp-step-card">
+          <div class="vp-step-num">1</div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Channel Integration</h3>
+          <p style="font-size: 14px; color: var(--vp-muted); line-height: 1.5;">Secure registration access by binding your communication layout profile directly inside our telegram operational system link nodes.</p>
+        </div>
+        <div class="vp-step-card">
+          <div class="vp-step-num">2</div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Sample Assessment</h3>
+          <p style="font-size: 14px; color: var(--vp-muted); line-height: 1.5;">Evaluate structural fonts using our provided digital text samples. Complete a baseline handwriting index alignment form.</p>
+        </div>
+        <div class="vp-step-card">
+          <div class="vp-step-num">3</div>
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 8px;">Disbursement Setup</h3>
+          <p style="font-size: 14px; color: var(--vp-muted); line-height: 1.5;">Submit your operational manual text pages sequentially to match specified quality timelines for fast account payment reconciliation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guidelines & Bottom CTA -->
+  <div class="vp-guide-box">
+    <h2 style="font-size: 28px; font-weight: 800; text-align: center; margin-bottom: 28px;">Corporate Terms &amp; Guidelines Framework</h2>
+    
+    <div class="vp-guide-item">
+      <span class="vp-check-icon">✓</span>
+      <p style="font-size: 14.5px; color: var(--vp-muted);">
+        <strong style="color: var(--vp-text);">1. Document Alignment:</strong> Writing configuration vectors must retain high visual uniformity metrics. Pages must map standard layout sheets clean of overlapping margins.
+      </p>
+    </div>
+    <div class="vp-guide-item">
+      <span class="vp-check-icon">✓</span>
+      <p style="font-size: 14.5px; color: var(--vp-muted);">
+        <strong style="color: var(--vp-text);">2. Submission Protocol:</strong> Complete assignment datasets must arrive cleanly within designated timeline thresholds to protect distribution schedules.
+      </p>
+    </div>
+    <div class="vp-guide-item">
+      <span class="vp-check-icon">✓</span>
+      <p style="font-size: 14.5px; color: var(--vp-muted);">
+        <strong style="color: var(--vp-text);">3. Clearance Windows:</strong> Transaction balance processing scales out within 48 operational registry hours post successful automated and manual Quality Checklist verification cycles.
+      </p>
+    </div>
+
+    <!-- Bottom Action Button -->
+    <div style="text-align: center; margin-top: 36px;">
+      <a href="https://t.me/+D2BmKU2nX6s3OTg1" class="vp-btn-10d vp-btn-10d-success" style="padding: 18px 40px; font-size: 18px;" target="_blank" rel="noopener">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+        Join Telegram Channel
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="vp-footer">
+    <p>© Vishv Book Publisher — Handwriting Homework Books Program. All rights reserved.</p>
+  </footer>
+
+</div>
+
+<script>
+(function() {
+  var sec = 15 * 60 - 1;
+  var el = document.getElementById('vp-clock');
+  if (!el) return;
+  setInterval(function() {
+    if (sec > 0) sec--;
+    var m = String(Math.floor(sec / 60)).padStart(2, '0');
+    var s = String(sec % 60).padStart(2, '0');
+    el.textContent = m + ':' + s + ' mins';
+  }, 1000);
+})();
+</script>
